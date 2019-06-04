@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;ParseUtils&quot; | yuyi-core-utils</title>
+	<title>PropertyUtils | yuyi-core-utils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:200,200i,300,300i,400,400i,700" rel="stylesheet">
@@ -53,10 +53,10 @@
 					<a href="../globals.html">全局</a>
 				</li>
 				<li>
-					<a href="_parseutils_.html">&quot;ParseUtils&quot;</a>
+					<a href="propertyutils.html">PropertyUtils</a>
 				</li>
 			</ul>
-			<h1>External module &quot;ParseUtils&quot;</h1>
+			<h1>External module PropertyUtils</h1>
 		</div>
 	</div>
 </header>
@@ -68,23 +68,23 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Enumerations</h3>
+							<h3>Modules</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-enum tsd-parent-kind-external-module"><a href="../enums/_parseutils_.edateformatter.html" class="tsd-kind-icon">EDate<wbr>Formatter</a></li>
+								<li class="tsd-kind-module tsd-parent-kind-external-module"><a href="propertyutils.lodash.html" class="tsd-kind-icon">Lodash</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_parseutils_.html#dateformatter" class="tsd-kind-icon">Date<wbr>Formatter</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="propertyutils.html#prototerymatcher" class="tsd-kind-icon">Prototery<wbr>Matcher</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_parseutils_.html#getreallength" class="tsd-kind-icon">get<wbr>Real<wbr>Length</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_parseutils_.html#parsetime" class="tsd-kind-icon">parse<wbr>Time</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_parseutils_.html#todatestring" class="tsd-kind-icon">to<wbr>Date<wbr>String</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="propertyutils.html#getexpressbystr" class="tsd-kind-icon">get<wbr>Express<wbr>ByStr</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="propertyutils.html#getpropbypath" class="tsd-kind-icon">get<wbr>Prop<wbr>ByPath</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="propertyutils.html#getpropertyfieldbycreate" class="tsd-kind-icon">get<wbr>Property<wbr>Field<wbr>ByCreate</a></li>
 							</ul>
 						</section>
 					</div>
@@ -93,12 +93,12 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Type aliases</h2>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
-					<a name="dateformatter" class="tsd-anchor"></a>
-					<h3>Date<wbr>Formatter</h3>
-					<div class="tsd-signature tsd-kind-icon">Date<wbr>Formatter<span class="tsd-signature-symbol">:</span> <a href="../enums/_parseutils_.edateformatter.html" class="tsd-signature-type">EDateFormatter</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
+					<a name="prototerymatcher" class="tsd-anchor"></a>
+					<h3>Prototery<wbr>Matcher</h3>
+					<div class="tsd-signature tsd-kind-icon">Prototery<wbr>Matcher<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>定义于 ParseUtils.ts:46</li>
+							<li>定义于 PropertyUtils/getPropertyFieldByCreate.ts:73</li>
 						</ul>
 					</aside>
 				</section>
@@ -106,95 +106,143 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
-					<a name="getreallength" class="tsd-anchor"></a>
-					<h3>get<wbr>Real<wbr>Length</h3>
+					<a name="getexpressbystr" class="tsd-anchor"></a>
+					<h3>get<wbr>Express<wbr>ByStr</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Real<wbr>Length<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Express<wbr>ByStr<span class="tsd-signature-symbol">(</span>keyStr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, defaultValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="propertyutils.html#prototerymatcher" class="tsd-signature-type">PrototeryMatcher</a><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>定义于 ParseUtils.ts:63</li>
+									<li>定义于 PropertyUtils/getPropertyFieldByCreate.ts:58</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>获得字符串实际长度，中文占2，英文占1</p>
+									<p>代码解释器，返回getPropertyFieldByCreate解释数组</p>
 								</div>
+								<h4 id="example">Example</h4>
+								<pre><code class="language-javascript"><span class="hljs-keyword">const</span> matcher = getExpressByStr(<span class="hljs-string">'a[1].b[0].d'</span>, <span class="hljs-number">123</span>)
+<span class="hljs-built_in">console</span>.log(matcher) <span class="hljs-comment">// [ ["a", []] , [1, {}] , ["b", []] , [0, {}] , ["d", 123] ]</span></code></pre>
+								<dl class="tsd-comment-tags">
+									<dt>group</dt>
+									<dd><p>PropertyUtils</p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">参数</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>str: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>字符串</p>
-									</div>
+									<h5>keyStr: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>defaultValue: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">返回值 <span class="tsd-signature-type">number</span></h4>
+							<h4 class="tsd-returns-title">返回值 <a href="propertyutils.html#prototerymatcher" class="tsd-signature-type">PrototeryMatcher</a><span class="tsd-signature-symbol">[]</span></h4>
+							<p>二维数组</p>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
-					<a name="parsetime" class="tsd-anchor"></a>
-					<h3>parse<wbr>Time</h3>
+					<a name="getpropbypath" class="tsd-anchor"></a>
+					<h3>get<wbr>Prop<wbr>ByPath</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">parse<wbr>Time<span class="tsd-signature-symbol">(</span>time<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, cFormat<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Prop<wbr>ByPath<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, strict<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>定义于 ParseUtils.ts:10</li>
+									<li>定义于 PropertyUtils/getPropByPath.ts:11</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
+							<h4 class="tsd-parameters-title">参数</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>obj: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>对象</p>
+									</div>
+								</li>
+								<li>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>解析路径</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flag默认值">默认值</span> strict: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>是否严格模式，obj解析出错时弹出错误</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">返回值 <span class="tsd-signature-type">object</span></h4>
+							<ul class="tsd-parameters">
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+					<a name="getpropertyfieldbycreate" class="tsd-anchor"></a>
+					<h3>get<wbr>Property<wbr>Field<wbr>ByCreate</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Property<wbr>Field<wbr>ByCreate&lt;V&gt;<span class="tsd-signature-symbol">(</span>main<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IKeyValueMap</span>, <span class="tsd-signature-symbol">...</span>proteryNames<span class="tsd-signature-symbol">: </span><a href="propertyutils.html#prototerymatcher" class="tsd-signature-type">PrototeryMatcher</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">V</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>定义于 PropertyUtils/getPropertyFieldByCreate.ts:25</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Created by jiachenpan on 16/11/18.</p>
+									<p>从对象中提取成员，不存在则新建一个成员（默认为一个空对象）
+									提取对象逐渐深入，一个对象一次只能提取一个成员（或他的子成员的子成员）</p>
 								</div>
+								<h4 id="example">Example</h4>
+								<pre><code class="language-javascript"><span class="hljs-keyword">const</span> obj = {}
+<span class="hljs-keyword">const</span> a = getPropertyFieldByCreate(obj, <span class="hljs-string">'a'</span>, [<span class="hljs-string">'a'</span>], [<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>])
+
+<span class="hljs-built_in">console</span>.log(a) <span class="hljs-comment">// 'b'</span>
+<span class="hljs-built_in">console</span>.log(obj) <span class="hljs-comment">// {"a":{"a":{"a":"b"}}}</span>
+</code></pre>
+								<dl class="tsd-comment-tags">
+									<dt>group</dt>
+									<dd><p>PropertyUtils</p>
+									</dd>
+								</dl>
 							</div>
-							<h4 class="tsd-parameters-title">参数</h4>
-							<ul class="tsd-parameters">
+							<h4 class="tsd-type-parameters-title">泛型参数</h4>
+							<ul class="tsd-type-parameters">
 								<li>
-									<h5>time: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> cFormat: <span class="tsd-signature-type">string</span></h5>
+									<h4>V</h4>
 									<div class="tsd-comment tsd-typography">
+										<p>返回值类型</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">返回值 <span class="tsd-signature-type">string</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
-					<a name="todatestring" class="tsd-anchor"></a>
-					<h3>to<wbr>Date<wbr>String</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">to<wbr>Date<wbr>String<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, formatter<span class="tsd-signature-symbol">?: </span><a href="_parseutils_.html#dateformatter" class="tsd-signature-type">DateFormatter</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>定义于 ParseUtils.ts:47</li>
-								</ul>
-							</aside>
 							<h4 class="tsd-parameters-title">参数</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>value: <span class="tsd-signature-type">any</span></h5>
+									<h5>main: <span class="tsd-signature-type">IKeyValueMap</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>键值对</p>
+									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flag默认值">默认值</span> formatter: <a href="_parseutils_.html#dateformatter" class="tsd-signature-type">DateFormatter</a><span class="tsd-signature-symbol"> =&nbsp;EDateFormatter.dateTime</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>proteryNames: <a href="propertyutils.html#prototerymatcher" class="tsd-signature-type">PrototeryMatcher</a><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>属性描述</p>
+									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">返回值 <span class="tsd-signature-type">Date</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">string</span>
-							</h4>
+							<h4 class="tsd-returns-title">返回值 <span class="tsd-signature-type">V</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -207,26 +255,28 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_parseutils_.html">"<wbr>Parse<wbr>Utils"</a>
+						<a href="propertyutils.html">Property<wbr>Utils</a>
+						<ul>
+							<li class=" tsd-kind-module tsd-parent-kind-external-module">
+								<a href="propertyutils.lodash.html">Lodash</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
-						<a href="../enums/_parseutils_.edateformatter.html" class="tsd-kind-icon">EDate<wbr>Formatter</a>
-					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="_parseutils_.html#dateformatter" class="tsd-kind-icon">Date<wbr>Formatter</a>
+						<a href="propertyutils.html#prototerymatcher" class="tsd-kind-icon">Prototery<wbr>Matcher</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="_parseutils_.html#getreallength" class="tsd-kind-icon">get<wbr>Real<wbr>Length</a>
+						<a href="propertyutils.html#getexpressbystr" class="tsd-kind-icon">get<wbr>Express<wbr>ByStr</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="_parseutils_.html#parsetime" class="tsd-kind-icon">parse<wbr>Time</a>
+						<a href="propertyutils.html#getpropbypath" class="tsd-kind-icon">get<wbr>Prop<wbr>ByPath</a>
 					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="_parseutils_.html#todatestring" class="tsd-kind-icon">to<wbr>Date<wbr>String</a>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="propertyutils.html#getpropertyfieldbycreate" class="tsd-kind-icon">get<wbr>Property<wbr>Field<wbr>ByCreate</a>
 					</li>
 				</ul>
 			</nav>
