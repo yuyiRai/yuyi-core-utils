@@ -1,6 +1,6 @@
 {
   "name": "yuyi-core-utils",
-  "version": "0.1.47",
+  "version": "0.1.48",
   "description": "",
   "keywords": [
     "mobx",
@@ -24,9 +24,9 @@
     "node": ">=6.0.0"
   },
   "scripts": {
-    "docs": "yuyidocs ../.",
-    "docs:full": "yuyidocs ../. -i",
-    "docs:watch": "yuyidocs ../. -w",
+    "docs": "yuyidocs ../..",
+    "docs:full": "yuyidocs ../.. -i",
+    "docs:watch": "yuyidocs ../.. -w",
     "predeploy-docs": "yarn run docs:full",
     "deploy-docs": "gh-pages -d docs",
     "lint": "tslint --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
