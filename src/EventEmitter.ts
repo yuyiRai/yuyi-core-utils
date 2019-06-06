@@ -1,3 +1,6 @@
+/**
+ * @module UtilClass
+ */
 import { Subscription } from 'rxjs/internal/Subscription';
 import { share } from 'rxjs/operators';
 import { Subject } from 'rxjs/internal/Subject';
@@ -8,7 +11,9 @@ type ErrorEvent<T> = (error: any) => void;
 type CompletedEvent<T> = () => void;
 
 /**
+ * 事件发射器
  * @noInheritDoc
+ * 
  */
 export class EventEmitter<T = any> extends Subject<T> {
   private sub: Subscription | null;
