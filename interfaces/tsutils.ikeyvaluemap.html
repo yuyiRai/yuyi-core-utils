@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IFunction | yuyi-core-utils</title>
+	<title>IKeyValueMap | yuyi-core-utils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:200,200i,300,300i,400,400i,700" rel="stylesheet">
@@ -53,13 +53,13 @@
 					<a href="../globals.html">全局</a>
 				</li>
 				<li>
-					<a href="../modules/_tsutils_interface_.html">&quot;TsUtils/interface&quot;</a>
+					<a href="../modules/tsutils.html">TsUtils</a>
 				</li>
 				<li>
-					<a href="_tsutils_interface_.ifunction.html">IFunction</a>
+					<a href="tsutils.ikeyvaluemap.html">IKeyValueMap</a>
 				</li>
 			</ul>
-			<h1>接口 IFunction</h1>
+			<h1>接口 IKeyValueMap&lt;V&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -70,35 +70,25 @@
 				<div class="tsd-comment tsd-typography">
 				</div>
 			</section>
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>V</h4>
+					</li>
+				</ul>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">IFunction</span>
+						<span class="target">IKeyValueMap</span>
 					</li>
 				</ul>
 			</section>
-			<section class="tsd-panel">
-				<h3 class="tsd-before-signature">Callable</h3>
-				<ul class="tsd-signatures tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">__call<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>定义于 TsUtils/interface.ts:11</li>
-							</ul>
-						</aside>
-						<h4 class="tsd-parameters-title">参数</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">返回值 <span class="tsd-signature-type">any</span></h4>
-					</li>
-				</ul>
+			<section class="tsd-panel tsd-kind-interface tsd-parent-kind-external-module tsd-has-type-parameter">
+				<h3 class="tsd-before-signature">Indexable</h3>
+				<div class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">V</span></div>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -106,15 +96,6 @@
 				<ul>
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_tsutils_index_.html">"<wbr>TsUtils/index"</a>
-					</li>
-					<li class="current tsd-kind-external-module">
-						<a href="../modules/_tsutils_interface_.html">"<wbr>TsUtils/interface"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="../modules/_tsutils_types_.html">"<wbr>TsUtils/types"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/commondtoutils.html">Common<wbr>Dto<wbr>Utils</a>
@@ -149,6 +130,9 @@
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/timeutils.html">Time<wbr>Utils</a>
 					</li>
+					<li class="current tsd-kind-external-module">
+						<a href="../modules/tsutils.html">Ts<wbr>Utils</a>
+					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/typeutils.html">Type<wbr>Utils</a>
 					</li>
@@ -159,18 +143,33 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="tsutils.ifunction.html" class="tsd-kind-icon">IFunction</a>
+					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-external">
-						<a href="_tsutils_interface_.ifunction.html" class="tsd-kind-icon">IFunction</a>
+					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="tsutils.ikeyvaluemap.html" class="tsd-kind-icon">IKey<wbr>Value<wbr>Map</a>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-has-type-parameter tsd-is-external">
-						<a href="_tsutils_interface_.ikeyvaluemap.html" class="tsd-kind-icon">IKey<wbr>Value<wbr>Map</a>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="../modules/tsutils.html#isany" class="tsd-kind-icon">Is<wbr>Any</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="../modules/_tsutils_interface_.html#interfaces" class="tsd-kind-icon">interfaces</a>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="../modules/tsutils.html#isarray" class="tsd-kind-icon">Is<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="../modules/tsutils.html#isbasetype" class="tsd-kind-icon">Is<wbr>Base<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="../modules/tsutils.html#isobject" class="tsd-kind-icon">Is<wbr>Object</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external">
+						<a href="../modules/tsutils.html#interfaces" class="tsd-kind-icon">interfaces</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external">
+						<a href="../modules/tsutils.html#types" class="tsd-kind-icon">types</a>
 					</li>
 				</ul>
 			</nav>

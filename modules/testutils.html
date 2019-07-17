@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;TsUtils/types&quot; | yuyi-core-utils</title>
+	<title>TestUtils | yuyi-core-utils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:200,200i,300,300i,400,400i,700" rel="stylesheet">
@@ -53,10 +53,10 @@
 					<a href="../globals.html">全局</a>
 				</li>
 				<li>
-					<a href="_tsutils_types_.html">&quot;TsUtils/types&quot;</a>
+					<a href="testutils.html">TestUtils</a>
 				</li>
 			</ul>
-			<h1>External module &quot;TsUtils/types&quot;</h1>
+			<h1>External module TestUtils</h1>
 		</div>
 	</div>
 </header>
@@ -68,130 +68,57 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Type aliases</h3>
+							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_tsutils_types_.html#isany" class="tsd-kind-icon">Is<wbr>Any</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_tsutils_types_.html#isarray" class="tsd-kind-icon">Is<wbr>Array</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_tsutils_types_.html#isbasetype" class="tsd-kind-icon">Is<wbr>Base<wbr>Type</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_tsutils_types_.html#isobject" class="tsd-kind-icon">Is<wbr>Object</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Variables</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_tsutils_types_.html#types" class="tsd-kind-icon">types</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter"><a href="testutils.html#waitingpromise" class="tsd-kind-icon">waiting<wbr>Promise</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Type aliases</h2>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
-					<a name="isany" class="tsd-anchor"></a>
-					<h3>Is<wbr>Any</h3>
-					<div class="tsd-signature tsd-kind-icon">Is<wbr>Any&lt;T, TRUE, FALSE&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IsAny&lt;T, TRUE, FALSE&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>定义于 TsUtils/types.ts:1</li>
-						</ul>
-					</aside>
-					<h4 class="tsd-type-parameters-title">泛型参数</h4>
-					<ul class="tsd-type-parameters">
-						<li>
-							<h4>T</h4>
-						</li>
-						<li>
-							<h4>TRUE</h4>
-						</li>
-						<li>
-							<h4>FALSE</h4>
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+					<a name="waitingpromise" class="tsd-anchor"></a>
+					<h3>waiting<wbr>Promise</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">waiting<wbr>Promise&lt;V&gt;<span class="tsd-signature-symbol">(</span>time<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, emitValue<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, isError<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>定义于 TestUtil/waitingPromise.ts:5</li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<dl class="tsd-comment-tags">
+									<dt>module</dt>
+									<dd><p>TestUtils</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">泛型参数</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>V</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">参数</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>time: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> emitValue: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flag默认值">默认值</span> isError: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">返回类型 <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
-					<a name="isarray" class="tsd-anchor"></a>
-					<h3>Is<wbr>Array</h3>
-					<div class="tsd-signature tsd-kind-icon">Is<wbr>Array&lt;T, TRUE, FALSE&gt;<span class="tsd-signature-symbol">:</span> <a href="_tsutils_types_.html#isany" class="tsd-signature-type">IsAny</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">FALSE</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T extends any[] ? TRUE : FALSE</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>定义于 TsUtils/types.ts:2</li>
-						</ul>
-					</aside>
-					<h4 class="tsd-type-parameters-title">泛型参数</h4>
-					<ul class="tsd-type-parameters">
-						<li>
-							<h4>T</h4>
-						</li>
-						<li>
-							<h4>TRUE</h4>
-						</li>
-						<li>
-							<h4>FALSE</h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
-					<a name="isbasetype" class="tsd-anchor"></a>
-					<h3>Is<wbr>Base<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">Is<wbr>Base<wbr>Type&lt;T, TRUE, FALSE&gt;<span class="tsd-signature-symbol">:</span> <a href="_tsutils_types_.html#isany" class="tsd-signature-type">IsAny</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">FALSE</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T extends string | number | boolean | Function ? TRUE : FALSE</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>定义于 TsUtils/types.ts:3</li>
-						</ul>
-					</aside>
-					<h4 class="tsd-type-parameters-title">泛型参数</h4>
-					<ul class="tsd-type-parameters">
-						<li>
-							<h4>T</h4>
-						</li>
-						<li>
-							<h4>TRUE</h4>
-						</li>
-						<li>
-							<h4>FALSE</h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
-					<a name="isobject" class="tsd-anchor"></a>
-					<h3>Is<wbr>Object</h3>
-					<div class="tsd-signature tsd-kind-icon">Is<wbr>Object&lt;T, TRUE, FALSE&gt;<span class="tsd-signature-symbol">:</span> <a href="_tsutils_types_.html#isany" class="tsd-signature-type">IsAny</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">FALSE</span><span class="tsd-signature-symbol">, </span><a href="_tsutils_types_.html#isbasetype" class="tsd-signature-type">IsBaseType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">FALSE</span><span class="tsd-signature-symbol">, </span><a href="_tsutils_types_.html#isarray" class="tsd-signature-type">IsArray</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">FALSE</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T extends object ? TRUE : FALSE</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>定义于 TsUtils/types.ts:4</li>
-						</ul>
-					</aside>
-					<h4 class="tsd-type-parameters-title">泛型参数</h4>
-					<ul class="tsd-type-parameters">
-						<li>
-							<h4>T</h4>
-						</li>
-						<li>
-							<h4>TRUE</h4>
-						</li>
-						<li>
-							<h4>FALSE</h4>
-						</li>
-					</ul>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Variables</h2>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
-					<a name="types" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> types</h3>
-					<div class="tsd-signature tsd-kind-icon">types<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>定义于 TsUtils/types.ts:6</li>
-						</ul>
-					</aside>
-					<div class="tsd-type-declaration">
-						<h4>类型定义</h4>
-						<ul class="tsd-parameters">
-						</ul>
-					</div>
 				</section>
 			</section>
 		</div>
@@ -200,15 +127,6 @@
 				<ul>
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_tsutils_index_.html">"<wbr>TsUtils/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_tsutils_interface_.html">"<wbr>TsUtils/interface"</a>
-					</li>
-					<li class="current tsd-kind-external-module">
-						<a href="_tsutils_types_.html">"<wbr>TsUtils/types"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="commondtoutils.html">Common<wbr>Dto<wbr>Utils</a>
@@ -237,11 +155,14 @@
 					<li class=" tsd-kind-external-module">
 						<a href="propertyutils.html">Property<wbr>Utils</a>
 					</li>
-					<li class=" tsd-kind-external-module">
+					<li class="current tsd-kind-external-module">
 						<a href="testutils.html">Test<wbr>Utils</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="timeutils.html">Time<wbr>Utils</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="tsutils.html">Ts<wbr>Utils</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="typeutils.html">Type<wbr>Utils</a>
@@ -253,20 +174,8 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="_tsutils_types_.html#isany" class="tsd-kind-icon">Is<wbr>Any</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="_tsutils_types_.html#isarray" class="tsd-kind-icon">Is<wbr>Array</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="_tsutils_types_.html#isbasetype" class="tsd-kind-icon">Is<wbr>Base<wbr>Type</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="_tsutils_types_.html#isobject" class="tsd-kind-icon">Is<wbr>Object</a>
-					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
-						<a href="_tsutils_types_.html#types" class="tsd-kind-icon">types</a>
+					<li class=" tsd-kind-function tsd-parent-kind-external-module tsd-has-type-parameter">
+						<a href="testutils.html#waitingpromise" class="tsd-kind-icon">waiting<wbr>Promise</a>
 					</li>
 				</ul>
 			</nav>
