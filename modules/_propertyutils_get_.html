@@ -96,14 +96,22 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>定义于 <a href="https://github.com/yuyiRai/yuyi-core-utils/blob/8ae8bc8/src/PropertyUtils/get.ts#L17">PropertyUtils/get.ts:17</a></li>
+									<li>定义于 PropertyUtils/get.ts:33</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Gets the property value at path of <code>object</code>. If the resolved value is undefined the defaultValue is used
-									in its place.</p>
+									<p>根据 object对象的path路径获取值。 如果解析 value 是 undefined 会以 defaultValue 取代。
+									Gets the property value at path of <code>object</code>. If the resolved value is undefined the defaultValue is used in its place.</p>
 								</div>
+								<h4 id="example">Example</h4>
+								<pre><code class="language-javascript"><span class="hljs-keyword">var</span> object = { <span class="hljs-string">'a'</span>: [{ <span class="hljs-string">'b'</span>: { <span class="hljs-string">'c'</span>: <span class="hljs-number">3</span> } }] };
+_.get(object, <span class="hljs-string">'a[0].b.c'</span>);
+<span class="hljs-comment">// =&gt; 3</span>
+_.get(object, [<span class="hljs-string">'a'</span>, <span class="hljs-string">'0'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>]);
+<span class="hljs-comment">// =&gt; 3</span>
+_.get(object, <span class="hljs-string">'a.b.c'</span>, <span class="hljs-string">'default'</span>);
+<span class="hljs-comment">// =&gt; 'default'</span></code></pre>
 							</div>
 							<h4 class="tsd-type-parameters-title">泛型参数</h4>
 							<ul class="tsd-type-parameters">
@@ -119,32 +127,32 @@
 								<li>
 									<h5>object: <span class="tsd-signature-type">TObject</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The <code>object</code> to query.</p>
+										<p>要检索的<code>对象</code>。
+										The <code>object</code> to query.</p>
 									</div>
 								</li>
 								<li>
 									<h5>path: <span class="tsd-signature-type">TKey</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">TKey</span><span class="tsd-signature-symbol">]</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The path of the property to get.</p>
+										<p>要获取属性的<code>路径</code>。
+										The <code>path</code> of the property to get.</p>
 									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">返回类型 <span class="tsd-signature-type">TObject[TKey]</span></h4>
-							<p>Returns the resolved value.</p>
+							<p>返回解析的值。
+							Returns the resolved value.</p>
 						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>定义于 <a href="https://github.com/yuyiRai/yuyi-core-utils/blob/8ae8bc8/src/PropertyUtils/get.ts#L22">PropertyUtils/get.ts:22</a></li>
+									<li>定义于 PropertyUtils/get.ts:37</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<dl class="tsd-comment-tags">
-									<dt>author</dt>
-									<dd><p><a href="https://mirismaili.github.io" class="external">S. Mahdi Mir-Ismaili</a></p>
-									</dd>
 									<dt>see</dt>
-									<dd><p>{ @linkcode HttpBox.constructor constructor() } 获取</p>
+									<dd><p><a href="https://www.lodashjs.com/docs/latest#_getobject-path-defaultvalue" class="external">Lodash.get </a></p>
 									</dd>
 								</dl>
 							</div>
@@ -174,13 +182,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>定义于 <a href="https://github.com/yuyiRai/yuyi-core-utils/blob/8ae8bc8/src/PropertyUtils/get.ts#L26">PropertyUtils/get.ts:26</a></li>
+									<li>定义于 PropertyUtils/get.ts:41</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<dl class="tsd-comment-tags">
 									<dt>see</dt>
-									<dd><p>lodash.get</p>
+									<dd><p><a href="https://www.lodashjs.com/docs/latest#_getobject-path-defaultvalue" class="external">Lodash.get </a></p>
 									</dd>
 								</dl>
 							</div>
@@ -216,13 +224,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>定义于 <a href="https://github.com/yuyiRai/yuyi-core-utils/blob/8ae8bc8/src/PropertyUtils/get.ts#L30">PropertyUtils/get.ts:30</a></li>
+									<li>定义于 PropertyUtils/get.ts:45</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<dl class="tsd-comment-tags">
 									<dt>see</dt>
-									<dd><p>lodash.get</p>
+									<dd><p><a href="https://www.lodashjs.com/docs/latest#_getobject-path-defaultvalue" class="external">Lodash.get </a></p>
 									</dd>
 								</dl>
 							</div>
@@ -246,13 +254,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>定义于 <a href="https://github.com/yuyiRai/yuyi-core-utils/blob/8ae8bc8/src/PropertyUtils/get.ts#L34">PropertyUtils/get.ts:34</a></li>
+									<li>定义于 PropertyUtils/get.ts:49</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<dl class="tsd-comment-tags">
 									<dt>see</dt>
-									<dd><p>lodash.get</p>
+									<dd><p><a href="https://www.lodashjs.com/docs/latest#_getobject-path-defaultvalue" class="external">Lodash.get </a></p>
 									</dd>
 								</dl>
 							</div>
@@ -279,13 +287,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>定义于 <a href="https://github.com/yuyiRai/yuyi-core-utils/blob/8ae8bc8/src/PropertyUtils/get.ts#L38">PropertyUtils/get.ts:38</a></li>
+									<li>定义于 PropertyUtils/get.ts:53</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<dl class="tsd-comment-tags">
 									<dt>see</dt>
-									<dd><p>lodash.get</p>
+									<dd><p><a href="https://www.lodashjs.com/docs/latest#_getobject-path-defaultvalue" class="external">Lodash.get </a></p>
 									</dd>
 								</dl>
 							</div>
@@ -318,13 +326,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>定义于 <a href="https://github.com/yuyiRai/yuyi-core-utils/blob/8ae8bc8/src/PropertyUtils/get.ts#L42">PropertyUtils/get.ts:42</a></li>
+									<li>定义于 PropertyUtils/get.ts:57</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<dl class="tsd-comment-tags">
 									<dt>see</dt>
-									<dd><p>lodash.get</p>
+									<dd><p><a href="https://www.lodashjs.com/docs/latest#_getobject-path-defaultvalue" class="external">Lodash.get </a></p>
 									</dd>
 								</dl>
 							</div>
@@ -351,13 +359,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>定义于 <a href="https://github.com/yuyiRai/yuyi-core-utils/blob/8ae8bc8/src/PropertyUtils/get.ts#L46">PropertyUtils/get.ts:46</a></li>
+									<li>定义于 PropertyUtils/get.ts:61</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<dl class="tsd-comment-tags">
 									<dt>see</dt>
-									<dd><p>lodash.get</p>
+									<dd><p><a href="https://www.lodashjs.com/docs/latest#_getobject-path-defaultvalue" class="external">Lodash.get </a></p>
 									</dd>
 								</dl>
 							</div>
@@ -375,13 +383,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>定义于 <a href="https://github.com/yuyiRai/yuyi-core-utils/blob/8ae8bc8/src/PropertyUtils/get.ts#L50">PropertyUtils/get.ts:50</a></li>
+									<li>定义于 PropertyUtils/get.ts:65</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<dl class="tsd-comment-tags">
 									<dt>see</dt>
-									<dd><p>lodash.get</p>
+									<dd><p><a href="https://www.lodashjs.com/docs/latest#_getobject-path-defaultvalue" class="external">Lodash.get </a></p>
 									</dd>
 								</dl>
 							</div>
@@ -411,48 +419,6 @@
 					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="_propertyutils_get_.html">"<wbr>Property<wbr>Utils/get"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="commondtoutils.html">Common<wbr>Dto<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="commonutils.html">Common<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="customutils.html">Custom<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="lodashextrautils.html">Lodash<wbr>Extra<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="main.html">Main</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="mobxutils.html">Mobx<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="optionsutils.html">Options<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="parseutils.html">Parse<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="propertyutils.html">Property<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="testutils.html">Test<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="timeutils.html">Time<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="tsutils.html">Ts<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="typeutils.html">Type<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="utilclass.html">Util<wbr>Class</a>
 					</li>
 				</ul>
 			</nav>

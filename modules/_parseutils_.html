@@ -74,6 +74,12 @@
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_parseutils_.lodashextrautils.html" class="tsd-kind-icon">Lodash<wbr>Extra<wbr>Utils</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_parseutils_.html#dateformatter" class="tsd-kind-icon">Date<wbr>Formatter</a></li>
@@ -82,7 +88,6 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_parseutils_.html#getreallength" class="tsd-kind-icon">get<wbr>Real<wbr>Length</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_parseutils_.html#parsetime" class="tsd-kind-icon">parse<wbr>Time</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-external-module"><a href="_parseutils_.html#todatestring" class="tsd-kind-icon">to<wbr>Date<wbr>String</a></li>
 							</ul>
@@ -98,44 +103,13 @@
 					<div class="tsd-signature tsd-kind-icon">Date<wbr>Formatter<span class="tsd-signature-symbol">:</span> <a href="../enums/_parseutils_.edateformatter.html" class="tsd-signature-type">EDateFormatter</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>定义于 ParseUtils.ts:46</li>
+							<li>定义于 ParseUtils.ts:51</li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
-					<a name="getreallength" class="tsd-anchor"></a>
-					<h3>get<wbr>Real<wbr>Length</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Real<wbr>Length<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>定义于 ParseUtils.ts:63</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>获得字符串实际长度，中文占2，英文占1</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">参数</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>str: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>字符串</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">返回值 <span class="tsd-signature-type">number</span></h4>
-						</li>
-					</ul>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-external-module">
 					<a name="parsetime" class="tsd-anchor"></a>
 					<h3>parse<wbr>Time</h3>
@@ -146,7 +120,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>定义于 ParseUtils.ts:10</li>
+									<li>定义于 ParseUtils.ts:13</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -165,7 +139,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">返回值 <span class="tsd-signature-type">string</span></h4>
+							<h4 class="tsd-returns-title">返回类型 <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -179,7 +153,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>定义于 ParseUtils.ts:47</li>
+									<li>定义于 ParseUtils.ts:52</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">参数</h4>
@@ -188,10 +162,10 @@
 									<h5>value: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flag默认值">默认值</span> formatter: <a href="_parseutils_.html#dateformatter" class="tsd-signature-type">DateFormatter</a><span class="tsd-signature-symbol"> =&nbsp;EDateFormatter.dateTime</span></h5>
+									<h5><span class="tsd-flag ts-flag缺省值">缺省值</span> formatter: <a href="_parseutils_.html#dateformatter" class="tsd-signature-type">DateFormatter</a><span class="tsd-signature-symbol"> =&nbsp;EDateFormatter.dateTime</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">返回值 <span class="tsd-signature-type">Date</span>
+							<h4 class="tsd-returns-title">返回类型 <span class="tsd-signature-type">Date</span>
 								<span class="tsd-signature-symbol"> | </span>
 								<span class="tsd-signature-type">string</span>
 							</h4>
@@ -206,41 +180,8 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_eventemitter_.html">"<wbr>Event<wbr>Emitter"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_httpbox_.html">"<wbr>Http<wbr>Box"</a>
-					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="_parseutils_.html">"<wbr>Parse<wbr>Utils"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="commonutils.html">Common<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="customutils.html">Custom<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="main.html">Main</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="mobxutils.html">Mobx<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="optionsutils.html">Options<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="propertyutils.html">Property<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="timeutils.html">Time<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="typeutils.html">Type<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="utilclass.html">Util<wbr>Class</a>
 					</li>
 				</ul>
 			</nav>
@@ -249,11 +190,11 @@
 					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
 						<a href="../enums/_parseutils_.edateformatter.html" class="tsd-kind-icon">EDate<wbr>Formatter</a>
 					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/_parseutils_.lodashextrautils.html" class="tsd-kind-icon">Lodash<wbr>Extra<wbr>Utils</a>
+					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
 						<a href="_parseutils_.html#dateformatter" class="tsd-kind-icon">Date<wbr>Formatter</a>
-					</li>
-					<li class=" tsd-kind-function tsd-parent-kind-external-module">
-						<a href="_parseutils_.html#getreallength" class="tsd-kind-icon">get<wbr>Real<wbr>Length</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-external-module">
 						<a href="_parseutils_.html#parsetime" class="tsd-kind-icon">parse<wbr>Time</a>

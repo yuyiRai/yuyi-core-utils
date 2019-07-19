@@ -56,7 +56,7 @@
 					<a href="eventemitter.html">EventEmitter</a>
 				</li>
 			</ul>
-			<h1>类 EventEmitter&lt;T&gt;</h1>
+			<h1>类 EventEmitter&lt;EventType&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -65,13 +65,24 @@
 		<div class="col-8 col-content">
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>事件发射器</p>
+					</div>
+					<p>订阅事件 见<a href="eventemitter.html#subscribe"><code>subscribe()</code></a></p>
+					<p>发射事件 见<a href="eventemitter.html#emit"><code>emit()</code></a></p>
+					<p>销毁 见<a href="eventemitter.html#dispose"><code>dispose()</code></a></p>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-type-parameters">
 				<h3>Type parameters</h3>
 				<ul class="tsd-type-parameters">
 					<li>
-						<h4>T</h4>
+						<h4>EventType</h4>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>事件类型</p>
+							</div>
+						</div>
 					</li>
 				</ul>
 			</section>
@@ -79,7 +90,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="tsd-signature-type">Subject</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>
+						<span class="tsd-signature-type">Subject</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventType</span><span class="tsd-signature-symbol">&gt;</span>
 						<ul class="tsd-hierarchy">
 							<li>
 								<span class="target">EventEmitter</span>
@@ -91,7 +102,7 @@
 			<section class="tsd-panel">
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
-					<li><span class="tsd-signature-type">Subscribable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li><span class="tsd-signature-type">Subscribable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventType</span><span class="tsd-signature-symbol">&gt;</span></li>
 					<li><span class="tsd-signature-type">SubscriptionLike</span></li>
 				</ul>
 			</section>
@@ -103,6 +114,12 @@
 							<h3>构造函数</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="eventemitter.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>成员</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-overwrite"><a href="eventemitter.html#subscribe" class="tsd-kind-icon">subscribe</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -126,31 +143,51 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Event<wbr>Emitter<span class="tsd-signature-symbol">(</span>next<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">NextEvent</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, error<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ErrorEvent</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, completed<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">CompletedEvent</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="eventemitter.html" class="tsd-signature-type">EventEmitter</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Event<wbr>Emitter<span class="tsd-signature-symbol">(</span>next<span class="tsd-signature-symbol">?: </span><a href="../interfaces/iutils.html#nextevent" class="tsd-signature-type">NextEvent</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventType</span><span class="tsd-signature-symbol">&gt;</span>, error<span class="tsd-signature-symbol">?: </span><a href="../interfaces/iutils.html#errorevent" class="tsd-signature-type">ErrorEvent</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventType</span><span class="tsd-signature-symbol">&gt;</span>, completed<span class="tsd-signature-symbol">?: </span><a href="../interfaces/iutils.html#completedevent" class="tsd-signature-type">CompletedEvent</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventType</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="eventemitter.html" class="tsd-signature-type">EventEmitter</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides Subject.__constructor</p>
 								<ul>
-									<li>定义于 EventEmitter.ts:15</li>
+									<li>定义于 EventEmitter/index.ts:31</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">参数</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> next: <span class="tsd-signature-type">NextEvent</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> next: <a href="../interfaces/iutils.html#nextevent" class="tsd-signature-type">NextEvent</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventType</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> error: <span class="tsd-signature-type">ErrorEvent</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> error: <a href="../interfaces/iutils.html#errorevent" class="tsd-signature-type">ErrorEvent</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventType</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> completed: <span class="tsd-signature-type">CompletedEvent</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> completed: <a href="../interfaces/iutils.html#completedevent" class="tsd-signature-type">CompletedEvent</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventType</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">返回值 <a href="eventemitter.html" class="tsd-signature-type">EventEmitter</a></h4>
+							<h4 class="tsd-returns-title">返回类型 <a href="eventemitter.html" class="tsd-signature-type">EventEmitter</a></h4>
 						</li>
 					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>成员</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+					<a name="subscribe" class="tsd-anchor"></a>
+					<h3>subscribe</h3>
+					<div class="tsd-signature tsd-kind-icon">subscribe<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">subscribe</span></div>
+					<aside class="tsd-sources">
+						<p>Overrides Observable.subscribe</p>
+						<ul>
+							<li>定义于 EventEmitter/index.ts:31</li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<dl class="tsd-comment-tags">
+							<dt>inheritdoc</dt>
+							<dd></dd>
+						</dl>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -165,7 +202,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>定义于 EventEmitter.ts:47</li>
+									<li>定义于 EventEmitter/index.ts:64</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -173,7 +210,7 @@
 									<p>注销</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">返回值 <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">返回类型 <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -181,13 +218,13 @@
 					<a name="emit" class="tsd-anchor"></a>
 					<h3>emit</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">emit<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">emit<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EventType</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>定义于 EventEmitter.ts:28</li>
+									<li>定义于 EventEmitter/index.ts:45</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -198,12 +235,12 @@
 							<h4 class="tsd-parameters-title">参数</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>value: <span class="tsd-signature-type">T</span></h5>
+									<h5>value: <span class="tsd-signature-type">EventType</span></h5>
 									<div class="tsd-comment tsd-typography">
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">返回值 <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">返回类型 <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -218,7 +255,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides Subject.error</p>
 								<ul>
-									<li>定义于 EventEmitter.ts:41</li>
+									<li>定义于 EventEmitter/index.ts:58</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">参数</h4>
@@ -227,7 +264,7 @@
 									<h5>error: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">返回值 <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">返回类型 <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -235,13 +272,13 @@
 					<a name="getlastvalue" class="tsd-anchor"></a>
 					<h3>get<wbr>Last<wbr>Value</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Last<wbr>Value<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Last<wbr>Value<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EventType</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>定义于 EventEmitter.ts:68</li>
+									<li>定义于 EventEmitter/index.ts:85</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -249,7 +286,7 @@
 									<p>取得最后发射的值</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">返回值 <span class="tsd-signature-type">T</span></h4>
+							<h4 class="tsd-returns-title">返回类型 <span class="tsd-signature-type">EventType</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -257,29 +294,29 @@
 					<a name="once" class="tsd-anchor"></a>
 					<h3>once</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">once<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">once<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EventType</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>定义于 EventEmitter.ts:36</li>
+									<li>定义于 EventEmitter/index.ts:53</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>发射单一值</p>
+									<p>发射一个事件后立即销毁监听器</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">参数</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>value: <span class="tsd-signature-type">T</span></h5>
+									<h5>value: <span class="tsd-signature-type">EventType</span></h5>
 									<div class="tsd-comment tsd-typography">
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">返回值 <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">返回类型 <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -293,7 +330,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>定义于 EventEmitter.ts:60</li>
+									<li>定义于 EventEmitter/index.ts:77</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -306,11 +343,11 @@
 								<li>
 									<h5>emit: <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>条件obs，发射任意值即注销</p>
+										<p>条件observable，发射任意值即注销</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">返回值 <span class="tsd-signature-type">this</span></h4>
+							<h4 class="tsd-returns-title">返回类型 <span class="tsd-signature-type">this</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -325,7 +362,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides Observable.toPromise</p>
 								<ul>
-									<li>定义于 EventEmitter.ts:75</li>
+									<li>定义于 EventEmitter/index.ts:92</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -333,7 +370,7 @@
 									<p>转化成标准Promise</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">返回值 <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">返回类型 <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -356,6 +393,9 @@
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 								<a href="eventemitter.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-overwrite">
+								<a href="eventemitter.html#subscribe" class="tsd-kind-icon">subscribe</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="eventemitter.html#dispose" class="tsd-kind-icon">dispose</a>

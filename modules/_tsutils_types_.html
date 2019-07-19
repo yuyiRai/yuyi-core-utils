@@ -63,6 +63,15 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<dl class="tsd-comment-tags">
+						<dt>module</dt>
+						<dd><p>TsUtils</p>
+						</dd>
+					</dl>
+				</div>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
@@ -76,10 +85,10 @@
 								<li class="tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter"><a href="_tsutils_types_.html#isobject" class="tsd-kind-icon">Is<wbr>Object</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-external">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-variable tsd-parent-kind-external-module"><a href="_tsutils_types_.html#types" class="tsd-kind-icon">types</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-external-module tsd-is-external"><a href="_tsutils_types_.html#types" class="tsd-kind-icon">types</a></li>
 							</ul>
 						</section>
 					</div>
@@ -93,19 +102,39 @@
 					<div class="tsd-signature tsd-kind-icon">Is<wbr>Any&lt;T, TRUE, FALSE&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">IsAny&lt;T, TRUE, FALSE&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>定义于 TsUtils/types.ts:1</li>
+							<li>定义于 TsUtils/types.ts:11</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>对于对象类型判断是否为any的条件类型</p>
+						</div>
+					</div>
 					<h4 class="tsd-type-parameters-title">泛型参数</h4>
 					<ul class="tsd-type-parameters">
 						<li>
 							<h4>T</h4>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Target</p>
+								</div>
+							</div>
 						</li>
 						<li>
 							<h4>TRUE</h4>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Target类型为any时的类型</p>
+								</div>
+							</div>
 						</li>
 						<li>
 							<h4>FALSE</h4>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>除此以外时的类型</p>
+								</div>
+							</div>
 						</li>
 					</ul>
 				</section>
@@ -115,7 +144,7 @@
 					<div class="tsd-signature tsd-kind-icon">Is<wbr>Array&lt;T, TRUE, FALSE&gt;<span class="tsd-signature-symbol">:</span> <a href="_tsutils_types_.html#isany" class="tsd-signature-type">IsAny</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">FALSE</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T extends any[] ? TRUE : FALSE</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>定义于 TsUtils/types.ts:2</li>
+							<li>定义于 TsUtils/types.ts:12</li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">泛型参数</h4>
@@ -137,7 +166,7 @@
 					<div class="tsd-signature tsd-kind-icon">Is<wbr>Base<wbr>Type&lt;T, TRUE, FALSE&gt;<span class="tsd-signature-symbol">:</span> <a href="_tsutils_types_.html#isany" class="tsd-signature-type">IsAny</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">FALSE</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T extends string | number | boolean | Function ? TRUE : FALSE</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>定义于 TsUtils/types.ts:3</li>
+							<li>定义于 TsUtils/types.ts:13</li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">泛型参数</h4>
@@ -159,7 +188,7 @@
 					<div class="tsd-signature tsd-kind-icon">Is<wbr>Object&lt;T, TRUE, FALSE&gt;<span class="tsd-signature-symbol">:</span> <a href="_tsutils_types_.html#isany" class="tsd-signature-type">IsAny</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">FALSE</span><span class="tsd-signature-symbol">, </span><a href="_tsutils_types_.html#isbasetype" class="tsd-signature-type">IsBaseType</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">FALSE</span><span class="tsd-signature-symbol">, </span><a href="_tsutils_types_.html#isarray" class="tsd-signature-type">IsArray</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">FALSE</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T extends object ? TRUE : FALSE</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>定义于 TsUtils/types.ts:4</li>
+							<li>定义于 TsUtils/types.ts:14</li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">泛型参数</h4>
@@ -176,17 +205,19 @@
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Variables</h2>
-				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module">
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-external-module tsd-is-external">
 					<a name="types" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> types</h3>
 					<div class="tsd-signature tsd-kind-icon">types<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>定义于 TsUtils/types.ts:6</li>
+							<li>定义于 TsUtils/types.ts:19</li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+					</div>
 					<div class="tsd-type-declaration">
 						<h4>类型定义</h4>
 						<ul class="tsd-parameters">
@@ -201,53 +232,8 @@
 					<li class="globals  ">
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_tsutils_index_.html">"<wbr>TsUtils/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_tsutils_interface_.html">"<wbr>TsUtils/interface"</a>
-					</li>
 					<li class="current tsd-kind-external-module">
 						<a href="_tsutils_types_.html">"<wbr>TsUtils/types"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="commondtoutils.html">Common<wbr>Dto<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="commonutils.html">Common<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="customutils.html">Custom<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="lodashextrautils.html">Lodash<wbr>Extra<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="main.html">Main</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="mobxutils.html">Mobx<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="optionsutils.html">Options<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="parseutils.html">Parse<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="propertyutils.html">Property<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="testutils.html">Test<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="timeutils.html">Time<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="typeutils.html">Type<wbr>Utils</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="utilclass.html">Util<wbr>Class</a>
 					</li>
 				</ul>
 			</nav>
@@ -265,7 +251,7 @@
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module tsd-has-type-parameter">
 						<a href="_tsutils_types_.html#isobject" class="tsd-kind-icon">Is<wbr>Object</a>
 					</li>
-					<li class=" tsd-kind-variable tsd-parent-kind-external-module">
+					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-external">
 						<a href="_tsutils_types_.html#types" class="tsd-kind-icon">types</a>
 					</li>
 				</ul>
