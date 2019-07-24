@@ -1,11 +1,14 @@
 /**
  * @module UtilClass
  */
-import { cloneDeep, isEqual, property, camelCase, set } from 'lodash';
-import { action, extendObservable, observable, IKeyValueMap } from 'mobx';
-import { Utils } from './Utils';
+import { cloneDeep, isEqual, property, camelCase, set, isNil, isString } from '../LodashExtra';
+import { action, extendObservable, observable } from 'mobx';
 import { autobind } from 'core-decorators';
-export default class CommonDto<T extends object = IKeyValueMap> {
+import { IKeyValueMap } from '../TsUtils/interface';
+import { isNotEmptyString, isNotEmptyValue, isEmptyValue } from '@/TypeLib';
+import { getPropertyFieldByCreate, getExpressByStr } from '@/PropertyUtils';
+
+export class CommonDto<T extends object = IKeyValueMap> {
   @observable.ref
   // tslint:disable-next-line: variable-name
   protected $$___source_dto: T;
@@ -36,7 +39,7 @@ export default class CommonDto<T extends object = IKeyValueMap> {
           return Reflect.set(this.$$___source_dto, key, value);
         }
       }, {
-          [keyName]: action.bound
+          [keyName]: action
         }, { deep: false });
     }
   }
@@ -44,25 +47,26 @@ export default class CommonDto<T extends object = IKeyValueMap> {
    * get value by key
    * @param { string } keyName
    */
-  @action.bound get(keyNameStr: string, defaultValue: any = undefined, useCreater = true) {
-    if (Utils.isNotEmptyString(keyNameStr)) {
+  @action get(keyNameStr: string, defaultValue: any = undefined, useCreater = true) {
+    if (isNotEmptyString(keyNameStr)) {
       for (let keyName of keyNameStr.split('||')) {
         const value = this.hasComputed(keyName)
           ? this.getComputed(keyName)
           : ((this[useCreater ? 'getAndCreateDeepPropertyByStr' : 'getPropertyByStr'])(keyName, defaultValue));
         // 取到值之后创建缓存，确定路径已经存在了
-        if (Utils.isNotEmptyValue(value)) {
+        if (isNotEmptyValue(value)) {
           this.setSafeComputed(keyName);
           return value;
         }
       }
     }
+    return undefined
   }
   /**
    * 创建缓存，使用安全方法
    * @param { string } keyName
    */
-  @action.bound createComputed(keyName: string) {
+  @action createComputed(keyName: string) {
     return extendObservable(this, {
       get ['_' + keyName]() {
         return this.getPropertyByStr(keyName);
@@ -74,17 +78,17 @@ export default class CommonDto<T extends object = IKeyValueMap> {
    * @param { string } keyName
    */
   @autobind hasComputed(keyName: string) {
-    return !Utils.isNil(Reflect.getOwnPropertyDescriptor(this, '_' + keyName));
+    return !isNil(Reflect.getOwnPropertyDescriptor(this, '_' + keyName));
   };
-  @action.bound setSafeComputed(keyName: string) {
+  @action setSafeComputed(keyName: string) {
     return !this.hasComputed(keyName) && this.createComputed(keyName);
   }
   getComputed = (keyName: string) => {
     return this['_' + keyName];
   };
-  @action.bound setLastValue(keyName: string, value: any) {
+  @action setLastValue(keyName: string, value: any) {
     const lastValueKey = `$$$_last_$__${keyName}`;
-    if (Utils.isEqual(value, this[lastValueKey])) {
+    if (isEqual(value, this[lastValueKey])) {
       return false;
     }
     else {
@@ -98,7 +102,7 @@ export default class CommonDto<T extends object = IKeyValueMap> {
    * @param { * } value
    * @param { boolean } isSafe 安全模式
    */
-  @action.bound set(keyName: string, value: any = undefined, isSafe: boolean = false) {
+  @action set(keyName: string, value: any = undefined, isSafe: boolean = false) {
     // console.log('set', keyName, value)
     if (!this.setLastValue(keyName, value)) {
       // console.log('值没有发生变化，set失败', keyName, value)
@@ -118,16 +122,16 @@ export default class CommonDto<T extends object = IKeyValueMap> {
    * @param { string } keyStr 指针地址
    * @param { * } defaultValue 没有取到值时默认返回并为该指针所赋的值
    */
-  @action.bound getAndCreateDeepPropertyByStr(keyStr: string, defaultValue: any) {
-    if (Utils.isNil(keyStr)) {
+  @action getAndCreateDeepPropertyByStr(keyStr: string, defaultValue: any) {
+    if (isNil(keyStr)) {
       // debugger
       return defaultValue;
     }
-    if (!Utils.isEmptyValue(keyStr)) {
-      const express = Utils.getExpressByStr(keyStr, defaultValue);
-      // console.log(this.$$___source_dto, keyStr, express, Reflect.apply(Utils.getInnerWarpField, this, [this.$$___source_dto, ...express]))
-      return Utils.getPropertyFieldByCreate(this.$$___source_dto, ...express);
-      // return Utils.getPropByPath(this.$$___source_dto, keyStr, false).v
+    if (!isEmptyValue(keyStr)) {
+      const express = getExpressByStr(keyStr, defaultValue);
+      // console.log(this.$$___source_dto, keyStr, express, Reflect.apply(getInnerWarpField, this, [this.$$___source_dto, ...express]))
+      return getPropertyFieldByCreate(this.$$___source_dto, ...express);
+      // return getPropByPath(this.$$___source_dto, keyStr, false).v
     }
     return defaultValue;
   }
@@ -136,14 +140,14 @@ export default class CommonDto<T extends object = IKeyValueMap> {
    * @param { string } keyName 例: a.b[0].c
    * @param { * } defaultValue 任何
    */
-  @action.bound getPropertyByStr(keyName: string, defaultValue: any) {
+  @action getPropertyByStr(keyName: string, defaultValue: any) {
     const value = property(keyName)(this.$$___source_dto);
-    return Utils.isEmptyValue(value) ? defaultValue : value;
+    return isEmptyValue(value) ? defaultValue : value;
   }
-  @action.bound setPropertyByStr(keyName: string, value: any) {
+  @action setPropertyByStr(keyName: string, value: any) {
     const dto = this.$$___source_dto;
     try {
-      set(dto, keyName, Utils.isEmptyValue(value) ? undefined : !Utils.isString(value) ? JSON.stringify(value) : `${value}`);
+      set(dto, keyName, isEmptyValue(value) ? undefined : !isString(value) ? JSON.stringify(value) : `${value}`);
       return true;
     }
     catch (e) {
@@ -160,5 +164,3 @@ export default class CommonDto<T extends object = IKeyValueMap> {
     return deep ? isEqual(dto, this.$$___source_dto) : this.$$___source_dto === dto;
   }
 }
-export { CommonDto }
-
